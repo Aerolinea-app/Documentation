@@ -1,0 +1,86 @@
+{
+  "aviones" : [
+    { 
+      "idAvion" : "int idAvio",  
+    }
+  ]
+},
+
+{
+  "vuelos" : [
+    { 
+      "Origen" : "origen", 
+      "Destino" : "destino", 
+      "Precio" : "precio",
+      "fechaHoraSalida" : "fechaHoraSalida", 
+      "fechaHoraLlegada" : "fechaHoraLlegada",
+      "Id" : "id", 
+      "idAvion" : "idAvion", 
+      },
+      "asientos_Preferencial" : {
+        "precio" : "precio_preferencial",
+        "ubicaciones" : {
+          "id_1" : true,
+          "id_2" : true,
+          "id_3" : true,
+        }
+      },
+    
+      "asientos_VIP" : {
+        "precio" : "precio_VIP",
+        "ubicaciones" : {
+          "id_1" : true,
+          "id_2" : true,
+          "id_3" : true,
+        }
+      },
+      
+      "asientos_Turista" : {
+        "precio" : "precio_turista",
+        "ubicaciones" : {
+          "id_1" : true,
+          "id_2" : true,
+          "id_3" : true,
+        }
+      }
+    }
+  ]
+},
+
+{
+  "usuarios" : [
+    {
+      "nombre" : "nombre_usuario",
+      "cedula" : "cedula",
+      "correo" : "correo"
+    }
+  ]
+},
+
+{
+  "reservas" : [
+    {
+      "id_reserva" : "id_reserva",
+      "idVuelo" : "idVuelo",
+      "precio" : "precio",
+      "clientes" : [ "id_cliente" ],
+      "asientos" : {
+        "vip" : [ "id_vip" ],
+        "preferencial" : [ "id_preferencial" ],
+        "Turista" : [ "id_turista" ]
+      },
+    
+      "Pago" : "True"
+    }
+  ]
+},
+
+{
+  "Localizacion" : [
+    {
+      "nombre_ubicacion" : "nombre_ubicacion",
+      "id_ubicacion" : "id_ubicacion",
+      "nombre_aeropuerto" : "nombre_aeropuerto"
+    }
+  ]
+}

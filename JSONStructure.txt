@@ -1,24 +1,26 @@
 {
   "aviones" : [
     { 
-      "idAvion" : "int idAvio",  
+      "idAvion" : "string",
+      "aerolineaAvion" : "string",
+      "imgAvion" : "string"
     }
   ]
 },
 
 {
-  "vuelos" : [
+  "vuelo" : [
     { 
-      "Origen" : "origen", 
-      "Destino" : "destino", 
-      "Precio" : "precio",
-      "fechaHoraSalida" : "fechaHoraSalida", 
+      "Origen" : "string", 
+      "Destino" : "string", 
+      "Precio" : "int",
+      "fechaHoraSalida" : "fechaHoraSalida",
       "fechaHoraLlegada" : "fechaHoraLlegada",
-      "Id" : "id", 
-      "idAvion" : "idAvion", 
+      "Id" : "int",
+      "idAvion" : "string",
       },
       "asientos_Preferencial" : {
-        "precio" : "precio_preferencial",
+        "precio" : "int",
         "ubicaciones" : {
           "id_1" : true,
           "id_2" : true,
@@ -27,7 +29,7 @@
       },
     
       "asientos_VIP" : {
-        "precio" : "precio_VIP",
+        "precio" : "int",
         "ubicaciones" : {
           "id_1" : true,
           "id_2" : true,
@@ -36,7 +38,7 @@
       },
       
       "asientos_Turista" : {
-        "precio" : "precio_turista",
+        "precio" : "int",
         "ubicaciones" : {
           "id_1" : true,
           "id_2" : true,
@@ -50,9 +52,9 @@
 {
   "usuarios" : [
     {
-      "nombre" : "nombre_usuario",
-      "cedula" : "cedula",
-      "correo" : "correo"
+      "nombre" : "string",
+      "cédula" : "string",
+      "correo" : "string"
     }
   ]
 },
@@ -60,27 +62,27 @@
 {
   "reservas" : [
     {
-      "id_reserva" : "id_reserva",
+      "id_reserva" : "string",
       "idVuelo" : "idVuelo",
-      "precio" : "precio",
-      "clientes" : [ "id_cliente" ],
+      "precio" : "int",
+      "clientes" : [ "cédula" ],
       "asientos" : {
         "vip" : [ "id_vip" ],
         "preferencial" : [ "id_preferencial" ],
         "Turista" : [ "id_turista" ]
       },
     
-      "Pago" : "True"
+      "estadoPago" : "True"
     }
   ]
 },
 
 {
-  "Localizacion" : [
+  "Localización" : [
     {
-      "nombre_ubicacion" : "nombre_ubicacion",
-      "id_ubicacion" : "id_ubicacion",
-      "nombre_aeropuerto" : "nombre_aeropuerto"
+      "nombre_ubicación" : "string",
+      "id_ubicación" : "string",
+      "nombre_aeropuerto" : "string"
     }
   ]
 }

@@ -1,0 +1,205 @@
+-- public.aeropuerto definition
+
+-- Drop table
+
+-- DROP TABLE public.aeropuerto;
+
+CREATE TABLE public.aeropuerto (
+	id_aeropuerto int4 NOT NULL DEFAULT nextval('aeropuerto_aero_id_seq'::regclass),
+	nombre varchar(80) NOT NULL,
+	iata varchar(5) NOT NULL,
+	ubicacion varchar(80) NOT NULL,
+	estado varchar(1) NOT NULL DEFAULT 'A'::character varying,
+	CONSTRAINT aeropuerto_pk PRIMARY KEY (id_aeropuerto)
+);
+
+-- public.asiento definition
+
+-- Drop table
+
+-- DROP TABLE public.asiento;
+
+CREATE TABLE public.asiento (
+	id_asiento int4 NOT NULL DEFAULT nextval('asiento_asie_id_seq'::regclass),
+	id_tipoa int4 NOT NULL,
+	id_avion int4 NOT NULL,
+	ubicacion varchar(12) NULL,
+	precio numeric(19, 2) NULL,
+	estado varchar(1) NOT NULL DEFAULT 'A'::character varying,
+	CONSTRAINT asiento_pk PRIMARY KEY (id_asiento)
+);
+CREATE INDEX ix_asie_avio ON public.asiento USING btree (id_avion);
+CREATE INDEX ix_asie_tias ON public.asiento USING btree (id_tipoa);
+
+
+-- public.asiento foreign keys
+
+ALTER TABLE public.asiento ADD CONSTRAINT asie_avio_fk FOREIGN KEY (id_avion) REFERENCES public.avion(id_avion) ON DELETE CASCADE;
+ALTER TABLE public.asiento ADD CONSTRAINT asie_tias_fk FOREIGN KEY (id_tipoa) REFERENCES public.tipo_asiento(id_tipoa) ON DELETE CASCADE;
+
+-- public.avion definition
+
+-- Drop table
+
+-- DROP TABLE public.avion;
+
+CREATE TABLE public.avion (
+	id_avion int4 NOT NULL DEFAULT nextval('avion_avio_id_seq'::regclass),
+	aerolinea_avion varchar(30) NOT NULL,
+	estado varchar(1) NOT NULL DEFAULT 'A'::character varying,
+	CONSTRAINT avion_pk PRIMARY KEY (id_avion)
+);
+
+-- public.factura definition
+
+-- Drop table
+
+-- DROP TABLE public.factura;
+
+CREATE TABLE public.factura (
+	id_factura int4 NOT NULL DEFAULT nextval('factura_fact_id_seq'::regclass),
+	id_usuario int4 NOT NULL,
+	fecha timestamptz NOT NULL,
+	estado varchar(1) NOT NULL DEFAULT 'A'::character varying,
+	CONSTRAINT factura_pk PRIMARY KEY (id_factura)
+);
+CREATE INDEX ix_fact_rese ON public.factura USING btree (id_usuario);
+
+
+-- public.factura foreign keys
+
+ALTER TABLE public.factura ADD CONSTRAINT fact_rese_fk FOREIGN KEY (id_usuario) REFERENCES public.reserva(id_reserva) ON DELETE CASCADE;
+
+-- public.reserva definition
+
+-- Drop table
+
+-- DROP TABLE public.reserva;
+
+CREATE TABLE public.reserva (
+	id_reserva int4 NOT NULL DEFAULT nextval('reserva_rese_id_seq'::regclass),
+	id_vuelo int4 NOT NULL,
+	id_asiento int4 NOT NULL,
+	id_usuario int4 NOT NULL,
+	precio_total numeric(19, 2) NULL,
+	estado_pago varchar(1) NULL,
+	fecha timestamptz NOT NULL,
+	estado varchar(1) NOT NULL DEFAULT 'A'::character varying,
+	CONSTRAINT reserva_pk PRIMARY KEY (id_reserva)
+);
+CREATE INDEX ix_rese_asie ON public.reserva USING btree (id_asiento);
+CREATE INDEX ix_rese_usua ON public.reserva USING btree (id_usuario);
+CREATE INDEX ix_rese_vuel ON public.reserva USING btree (id_vuelo);
+
+
+-- public.reserva foreign keys
+
+ALTER TABLE public.reserva ADD CONSTRAINT rese_asie_fk FOREIGN KEY (id_asiento) REFERENCES public.asiento(id_asiento) ON DELETE CASCADE;
+ALTER TABLE public.reserva ADD CONSTRAINT rese_usua_fk FOREIGN KEY (id_usuario) REFERENCES public.usuario(id_usuario) ON DELETE CASCADE;
+ALTER TABLE public.reserva ADD CONSTRAINT rese_vuel_fk FOREIGN KEY (id_vuelo) REFERENCES public.vuelo(id_vuelo) ON DELETE CASCADE;
+
+-- public.rol_usuario definition
+
+-- Drop table
+
+-- DROP TABLE public.rol_usuario;
+
+CREATE TABLE public.rol_usuario (
+	id_rolusuario int4 NOT NULL DEFAULT nextval('rol_usuario_rous_id_seq'::regclass),
+	descripcion varchar(30) NOT NULL,
+	estado varchar(1) NOT NULL DEFAULT 'A'::character varying,
+	CONSTRAINT rol_usuario_pk PRIMARY KEY (id_rolusuario)
+);
+
+-- public.tipo_asiento definition
+
+-- Drop table
+
+-- DROP TABLE public.tipo_asiento;
+
+CREATE TABLE public.tipo_asiento (
+	id_tipoa int4 NOT NULL DEFAULT nextval('tipo_asiento_tias_id_seq'::regclass),
+	descripcion varchar(30) NOT NULL,
+	estado varchar(1) NOT NULL DEFAULT 'A'::character varying,
+	CONSTRAINT tipo_asiento_pk PRIMARY KEY (id_tipoa)
+);
+
+-- public.trayecto definition
+
+-- Drop table
+
+-- DROP TABLE public.trayecto;
+
+CREATE TABLE public.trayecto (
+	id_trayecto int4 NOT NULL DEFAULT nextval('trayecto_tray_id_seq'::regclass),
+	id_avion int4 NOT NULL,
+	id_aeropuerto_origen int4 NOT NULL,
+	id_aeropuerto_destino int4 NOT NULL,
+	hora_salida timestamptz NOT NULL,
+	hora_llegada timestamptz NOT NULL,
+	id_vuelo int4 NOT NULL,
+	estado varchar(1) NOT NULL DEFAULT 'A'::character varying
+);
+CREATE INDEX ix_tray_aero_destino ON public.trayecto USING btree (id_aeropuerto_destino);
+CREATE INDEX ix_tray_aero_origen ON public.trayecto USING btree (id_aeropuerto_origen);
+CREATE INDEX ix_tray_avio ON public.trayecto USING btree (id_avion);
+CREATE INDEX ix_tray_vuel ON public.trayecto USING btree (id_vuelo);
+
+
+-- public.trayecto foreign keys
+
+ALTER TABLE public.trayecto ADD CONSTRAINT tray_aero_destino_fk FOREIGN KEY (id_aeropuerto_destino) REFERENCES public.aeropuerto(id_aeropuerto) ON DELETE CASCADE;
+ALTER TABLE public.trayecto ADD CONSTRAINT tray_aero_origen_fk FOREIGN KEY (id_aeropuerto_origen) REFERENCES public.aeropuerto(id_aeropuerto) ON DELETE CASCADE;
+ALTER TABLE public.trayecto ADD CONSTRAINT tray_avio_fk FOREIGN KEY (id_avion) REFERENCES public.avion(id_avion) ON DELETE CASCADE;
+ALTER TABLE public.trayecto ADD CONSTRAINT tray_vuel_fk FOREIGN KEY (id_vuelo) REFERENCES public.vuelo(id_vuelo) ON DELETE CASCADE;
+
+-- public.usuario definition
+
+-- Drop table
+
+-- DROP TABLE public.usuario;
+
+CREATE TABLE public.usuario (
+	id_usuario int4 NOT NULL DEFAULT nextval('usuario_usua_id_seq'::regclass),
+	id_rolusuario int4 NULL,
+	cedula varchar(12) NOT NULL,
+	nombre varchar(30) NOT NULL,
+	apellido varchar(30) NOT NULL,
+	correo varchar(50) NOT NULL,
+	estado varchar(1) NOT NULL DEFAULT 'A'::character varying,
+	CONSTRAINT usuario_pk PRIMARY KEY (id_usuario)
+);
+CREATE INDEX ix_usua_rous ON public.usuario USING btree (id_rolusuario);
+
+
+-- public.usuario foreign keys
+
+ALTER TABLE public.usuario ADD CONSTRAINT usua_rous_fk FOREIGN KEY (id_rolusuario) REFERENCES public.rol_usuario(id_rolusuario) ON DELETE CASCADE;
+
+-- public.vuelo definition
+
+-- Drop table
+
+-- DROP TABLE public.vuelo;
+
+CREATE TABLE public.vuelo (
+	id_vuelo int4 NOT NULL DEFAULT nextval('vuelo_vuel_id_seq'::regclass),
+	id_aeropuerto_origen int4 NOT NULL,
+	id_aeropuerto_destino int4 NOT NULL,
+	precio numeric(19, 2) NOT NULL,
+	hora_salida timestamptz NOT NULL,
+	hora_llegada timestamptz NOT NULL,
+	precio_asiento_preferencial numeric(19, 2) NOT NULL,
+	precio_asiento_vip numeric(19, 2) NOT NULL,
+	precio_asiento_turista numeric(19, 2) NOT NULL,
+	estado varchar(1) NOT NULL DEFAULT 'A'::character varying,
+	CONSTRAINT vuelo_pk PRIMARY KEY (id_vuelo)
+);
+CREATE INDEX ix_vuel_aero_destino ON public.vuelo USING btree (id_aeropuerto_destino);
+CREATE INDEX ix_vuel_aero_origen ON public.vuelo USING btree (id_aeropuerto_origen);
+
+
+-- public.vuelo foreign keys
+
+ALTER TABLE public.vuelo ADD CONSTRAINT vuel_aero_destino_fk FOREIGN KEY (id_aeropuerto_destino) REFERENCES public.aeropuerto(id_aeropuerto) ON DELETE CASCADE;
+ALTER TABLE public.vuelo ADD CONSTRAINT vuel_aero_origen_fk FOREIGN KEY (id_aeropuerto_origen) REFERENCES public.aeropuerto(id_aeropuerto) ON DELETE CASCADE;

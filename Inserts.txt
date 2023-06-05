@@ -1,0 +1,335 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red102\green151\blue104;\red115\green158\blue202;\red170\green170\blue170;
+\red158\green158\blue158;\red192\green192\blue192;\red202\green197\blue128;\red238\green204\blue100;}
+{\*\expandedcolortbl;;\csgenericrgb\c40000\c59216\c40784;\csgenericrgb\c45098\c61961\c79216;\csgenericrgb\c66667\c66667\c66667;
+\csgenericrgb\c61961\c61961\c61961;\csgenericrgb\c75294\c75294\c75294;\csgenericrgb\c79216\c77255\c50196;\csgenericrgb\c93333\c80000\c39216;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 --Inserts de Tipo_Asiento\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 tipo_asiento\cf4  (\cf5 id_tipoa\cf4 , \cf5 descripcion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 1\cf4 , \cf7 'Preferencial'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 tipo_asiento\cf4  (\cf5 id_tipoa\cf4 , \cf5 descripcion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 2\cf4 , \cf7 'Vip'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 tipo_asiento\cf4  (\cf5 id_tipoa\cf4 , \cf5 descripcion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 3\cf4 , \cf7 'Turiste'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+\
+\cf2 --Inserts de Rol_Usuario\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 rol_usuario\cf4  (\cf5 id_rolusuario\cf4 , \cf5 descripcion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 1\cf4 , \cf7 'Administrador'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 rol_usuario\cf4  (\cf5 id_rolusuario\cf4 , \cf5 descripcion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 2\cf4 , \cf7 'Cliente'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+\
+\
+\cf2 --Insert de Aviones\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 avion\cf4  (\cf5 id_avion\cf4 , \cf5 aerolinea_avion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 1\cf4 , \cf7 'Avianca'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 avion\cf4  (\cf5 id_avion\cf4 , \cf5 aerolinea_avion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 2\cf4 , \cf7 'American Airlines'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 avion\cf4  (\cf5 id_avion\cf4 , \cf5 aerolinea_avion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 3\cf4 , \cf7 'Delta AirLines'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 avion\cf4  (\cf5 id_avion\cf4 , \cf5 aerolinea_avion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 4\cf4 , \cf7 'FlowAir'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 avion\cf4  (\cf5 id_avion\cf4 , \cf5 aerolinea_avion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 5\cf4 , \cf7 'British Airways'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 avion\cf4  (\cf5 id_avion\cf4 , \cf5 aerolinea_avion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 6\cf4 , \cf7 'Emirates'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 avion\cf4  (\cf5 id_avion\cf4 , \cf5 aerolinea_avion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 7\cf4 , \cf7 'Air France'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 avion\cf4  (\cf5 id_avion\cf4 , \cf5 aerolinea_avion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 8\cf4 , \cf7 'LATAM'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 avion\cf4  (\cf5 id_avion\cf4 , \cf5 aerolinea_avion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 9\cf4 , \cf7 'VivaAir'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 avion\cf4  (\cf5 id_avion\cf4 , \cf5 aerolinea_avion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 10\cf4 , \cf7 'Copa'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+\
+\
+\cf2 --Inserts de Aeropuertos\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 aeropuerto\cf4  (\cf5 id_aeropuerto\cf4 , \cf5 nombre\cf4 , \cf5 iata\cf4 , \cf5 ubicacion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 1\cf4 , \cf7 'El Dorado'\cf4 , \cf7 'BOG'\cf4 , \cf7 'Bogot\'e1'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 aeropuerto\cf4  (\cf5 id_aeropuerto\cf4 , \cf5 nombre\cf4 , \cf5 iata\cf4 , \cf5 ubicacion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 2\cf4 , \cf7 'Jos\'e9 Mar\'eda C\'f3rdova'\cf4 , \cf7 'MDE'\cf4 , \cf7 'Medell\'edn'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 aeropuerto\cf4  (\cf5 id_aeropuerto\cf4 , \cf5 nombre\cf4 , \cf5 iata\cf4 , \cf5 ubicacion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 3\cf4 , \cf7 'Rafael N\'fa\'f1ez'\cf4 , \cf7 'CTG'\cf4 , \cf7 'Cartagena'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 aeropuerto\cf4  (\cf5 id_aeropuerto\cf4 , \cf5 nombre\cf4 , \cf5 iata\cf4 , \cf5 ubicacion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 4\cf4 , \cf7 'Alfonso Bonilla Arag\'f3n'\cf4 , \cf7 'CLO'\cf4 , \cf7 'Cali'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 aeropuerto\cf4  (\cf5 id_aeropuerto\cf4 , \cf5 nombre\cf4 , \cf5 iata\cf4 , \cf5 ubicacion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 5\cf4 , \cf7 'Ernesto Cortissoz'\cf4 , \cf7 'BAQ'\cf4 , \cf7 'Barranquilla'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 aeropuerto\cf4  (\cf5 id_aeropuerto\cf4 , \cf5 nombre\cf4 , \cf5 iata\cf4 , \cf5 ubicacion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 6\cf4 , \cf7 'Gustavo Rojas Pinilla'\cf4 , \cf7 'ADZ'\cf4 , \cf7 'San Andr\'e9s'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 aeropuerto\cf4  (\cf5 id_aeropuerto\cf4 , \cf5 nombre\cf4 , \cf5 iata\cf4 , \cf5 ubicacion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 7\cf4 , \cf7 'Mateca\'f1a'\cf4 , \cf7 'PEI'\cf4 , \cf7 'Pereira'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 aeropuerto\cf4  (\cf5 id_aeropuerto\cf4 , \cf5 nombre\cf4 , \cf5 iata\cf4 , \cf5 ubicacion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 8\cf4 , \cf7 'Antonio Nari\'f1o'\cf4 , \cf7 'PSO'\cf4 , \cf7 'Pasto'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 aeropuerto\cf4  (\cf5 id_aeropuerto\cf4 , \cf5 nombre\cf4 , \cf5 iata\cf4 , \cf5 ubicacion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 9\cf4 , \cf7 'Los Angeles International Airport'\cf4 , \cf7 'LAX'\cf4 , \cf7 'Los Angeles, CA'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 aeropuerto\cf4  (\cf5 id_aeropuerto\cf4 , \cf5 nombre\cf4 , \cf5 iata\cf4 , \cf5 ubicacion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 10\cf4 , \cf7 'John F. Kennedy International Airport'\cf4 , \cf7 'JFK'\cf4 , \cf7 'New York, NY'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 aeropuerto\cf4  (\cf5 id_aeropuerto\cf4 , \cf5 nombre\cf4 , \cf5 iata\cf4 , \cf5 ubicacion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 11\cf4 , \cf7 'Hartsfield-Jackson Atlanta International Airport'\cf4 , \cf7 'ATL'\cf4 , \cf7 'Atlanta, GA'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 aeropuerto\cf4  (\cf5 id_aeropuerto\cf4 , \cf5 nombre\cf4 , \cf5 iata\cf4 , \cf5 ubicacion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 12\cf4 , \cf7 'Heathrow Airport'\cf4 , \cf7 'LHR'\cf4 , \cf7 'Londres, Reino Unido'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 aeropuerto\cf4  (\cf5 id_aeropuerto\cf4 , \cf5 nombre\cf4 , \cf5 iata\cf4 , \cf5 ubicacion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 13\cf4 , \cf7 'Charles de Gaulle Airport'\cf4 , \cf7 'CDG'\cf4 , \cf7 'Par\'eds, Francia'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 aeropuerto\cf4  (\cf5 id_aeropuerto\cf4 , \cf5 nombre\cf4 , \cf5 iata\cf4 , \cf5 ubicacion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 14\cf4 , \cf7 'Frankfurt Airport'\cf4 , \cf7 'FRA'\cf4 , \cf7 'Fr\'e1ncfort, Alemania'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 aeropuerto\cf4  (\cf5 id_aeropuerto\cf4 , \cf5 nombre\cf4 , \cf5 iata\cf4 , \cf5 ubicacion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 15\cf4 , \cf7 'S\'e3o Paulo-Guarulhos'\cf4 , \cf7 'GRU'\cf4 , \cf7 'S\'e3o Paulo, Brasil'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 aeropuerto\cf4  (\cf5 id_aeropuerto\cf4 , \cf5 nombre\cf4 , \cf5 iata\cf4 , \cf5 ubicacion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 16\cf4 , \cf7 'Jorge Ch\'e1vez'\cf4 , \cf7 'LIM'\cf4 , \cf7 'Lima, Per\'fa'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 aeropuerto\cf4  (\cf5 id_aeropuerto\cf4 , \cf5 nombre\cf4 , \cf5 iata\cf4 , \cf5 ubicacion\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4  (\cf6 17\cf4 , \cf7 'Comodoro Arturo Merino Ben\'edtez'\cf4 , \cf7 'SCL'\cf4 , \cf7 'Santiago, Chile'\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+\
+\
+\cf2 --Insert de vuelos\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 vuelo\cf4  (\cf5 id_vuelo\cf4 , \cf5 id_aeropuerto_origen\cf4 , \cf5 id_aeropuerto_destino\cf4 , \cf5 precio\cf4 , \cf5 hora_salida\cf4 , \cf5 hora_llegada\cf4 , \cf5 precio_asiento_preferencial\cf4 , \cf5 precio_asiento_vip\cf4 , \cf5 precio_asiento_turista\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4 (\cf6 1\cf4 , \cf6 1\cf4 , \cf6 3\cf4 , \cf6 60000.00\cf4 , \cf7 '2023-06-05 16:45:58.646'\cf4 , \cf7 '2023-06-05 16:45:58.646'\cf4 , \cf6 180000.00\cf4 , \cf6 140000.00\cf4 , \cf6 100000.00\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 vuelo\cf4  (\cf5 id_vuelo\cf4 , \cf5 id_aeropuerto_origen\cf4 , \cf5 id_aeropuerto_destino\cf4 , \cf5 precio\cf4 , \cf5 hora_salida\cf4 , \cf5 hora_llegada\cf4 , \cf5 precio_asiento_preferencial\cf4 , \cf5 precio_asiento_vip\cf4 , \cf5 precio_asiento_turista\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4 (\cf6 2\cf4 , \cf6 12\cf4 , \cf6 4\cf4 , \cf6 100000.00\cf4 , \cf7 '2023-06-05 16:49:09.373'\cf4 , \cf7 '2023-06-05 16:49:09.373'\cf4 , \cf6 200000.00\cf4 , \cf6 190000.00\cf4 , \cf6 150000.00\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 vuelo\cf4  (\cf5 id_vuelo\cf4 , \cf5 id_aeropuerto_origen\cf4 , \cf5 id_aeropuerto_destino\cf4 , \cf5 precio\cf4 , \cf5 hora_salida\cf4 , \cf5 hora_llegada\cf4 , \cf5 precio_asiento_preferencial\cf4 , \cf5 precio_asiento_vip\cf4 , \cf5 precio_asiento_turista\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4 (\cf6 3\cf4 , \cf6 6\cf4 , \cf6 15\cf4 , \cf6 120000.00\cf4 , \cf7 '2023-06-05 16:50:06.683'\cf4 , \cf7 '2023-06-05 16:50:06.683'\cf4 , \cf6 140000.00\cf4 , \cf6 100000.00\cf4 , \cf6 80000.00\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 vuelo\cf4  (\cf5 id_vuelo\cf4 , \cf5 id_aeropuerto_origen\cf4 , \cf5 id_aeropuerto_destino\cf4 , \cf5 precio\cf4 , \cf5 hora_salida\cf4 , \cf5 hora_llegada\cf4 , \cf5 precio_asiento_preferencial\cf4 , \cf5 precio_asiento_vip\cf4 , \cf5 precio_asiento_turista\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4 (\cf6 4\cf4 , \cf6 4\cf4 , \cf6 12\cf4 , \cf6 120000.00\cf4 , \cf7 '2023-06-05 16:57:24.253'\cf4 , \cf7 '2023-06-05 16:57:24.253'\cf4 , \cf6 230000.00\cf4 , \cf6 190000.00\cf4 , \cf6 150000.00\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 vuelo\cf4  (\cf5 id_vuelo\cf4 , \cf5 id_aeropuerto_origen\cf4 , \cf5 id_aeropuerto_destino\cf4 , \cf5 precio\cf4 , \cf5 hora_salida\cf4 , \cf5 hora_llegada\cf4 , \cf5 precio_asiento_preferencial\cf4 , \cf5 precio_asiento_vip\cf4 , \cf5 precio_asiento_turista\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4 (\cf6 5\cf4 , \cf6 7\cf4 , \cf6 16\cf4 , \cf6 1000000.00\cf4 , \cf7 '2023-06-05 16:58:32.262'\cf4 , \cf7 '2023-06-05 16:58:32.262'\cf4 , \cf6 180000.00\cf4 , \cf6 170000.00\cf4 , \cf6 140000.00\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+
+\f1\b \cf3 INSERT
+\f0\b0 \cf4  
+\f1\b \cf3 INTO
+\f0\b0 \cf4  \cf5 vuelo\cf4  (\cf5 id_vuelo\cf4 , \cf5 id_aeropuerto_origen\cf4 , \cf5 id_aeropuerto_destino\cf4 , \cf5 precio\cf4 , \cf5 hora_salida\cf4 , \cf5 hora_llegada\cf4 , \cf5 precio_asiento_preferencial\cf4 , \cf5 precio_asiento_vip\cf4 , \cf5 precio_asiento_turista\cf4 , \cf5 estado\cf4 )\cf0 \
+
+\f1\b \cf3 VALUES
+\f0\b0 \cf4 (\cf6 6\cf4 , \cf6 5\cf4 , \cf6 11\cf4 , \cf6 130000.00\cf4 , \cf7 '2023-06-05 16:59:22.502'\cf4 , \cf7 '2023-06-05 16:59:22.502'\cf4 , \cf6 250000.00\cf4 , \cf6 200000.00\cf4 , \cf6 150000.00\cf4 , \cf7 'A'\cf4 )\cf8 ;\cf0 \
+\
+\
+\
+\
+\
+\
+\
+\
+}
